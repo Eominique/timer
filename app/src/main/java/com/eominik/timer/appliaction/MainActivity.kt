@@ -1,4 +1,4 @@
-package com.eominik.timer
+package com.eominik.timer.appliaction
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
