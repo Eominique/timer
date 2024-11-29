@@ -4,10 +4,11 @@ import android.content.res.Configuration
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.eominik.timer.ui.theme.TimerTheme
+import androidx.navigation.NavHostController
+import com.eominik.timer.core.theme.TimerTheme
 
 @Composable
-fun TimerScreen() {
+fun TimerScreen(navController: NavHostController) {
     ScreenContent()
 }
 

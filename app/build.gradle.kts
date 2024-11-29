@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+
     id ("kotlin-kapt")
     id ("dagger.hilt.android.plugin")
     id ("kotlin-parcelize")
@@ -63,11 +64,8 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
 
-    // Compose UI Util
-  //  implementation ("androidx.compose.ui:ui-util:1.7.5")
-
     // Compose Navigation
-  //  implementation ("androidx.navigation:navigation-compose:2.8.4")
+    implementation ("androidx.navigation:navigation-compose:2.8.4")
 
     // Compose Extended Icons
     implementation ("androidx.compose.material:material-icons-extended:1.0.0")
@@ -78,6 +76,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.7")
   //  implementation("androidx.compose.runtime:runtime-livedata:2.4.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7")
+    implementation(libs.core.ktx)
     kapt("androidx.lifecycle:lifecycle-common-java8:2.8.7")
 
     // Room
@@ -107,7 +106,11 @@ dependencies {
 
 
 
-
+// Test dependencies
+    testImplementation ("junit:junit:4.13.2")
+    testImplementation ("org.mockito:mockito-core:4.8.0")
+    testImplementation ("androidx.room:room-testing:2.6.1")
+    testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

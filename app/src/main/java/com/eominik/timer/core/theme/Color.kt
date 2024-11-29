@@ -1,4 +1,4 @@
-package com.eominik.timer.ui.theme
+package com.eominik.timer.core.theme
 
 import androidx.compose.ui.graphics.Color
 

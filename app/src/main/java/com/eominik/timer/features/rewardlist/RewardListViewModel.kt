@@ -1,4 +1,4 @@
-package com.eominik.timer.rewardlist
+package com.eominik.timer.features.rewardlist
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
