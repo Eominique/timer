@@ -47,16 +47,9 @@ enum class IconKey(val rewardIcon: ImageVector) {
 
 }
 
-object IconKeys {
-    const val CAKE = "CAKE"
-    const val BATH_TUB = "BATH_TUB"
-    const val TV = "TV"
-}
+val defaultRewardIconKey = IconKey.STAR
 
-val rewardIcons = mapOf<String, ImageVector>(
-    Pair(IconKeys.CAKE, Icons.Default.Cake),
-    Pair(IconKeys.BATH_TUB, Icons.Default.Bathtub),
-    Pair(IconKeys.TV, Icons.Default.Tv)
-)
+
+
 
 val defaultIcon = Icons.Default.Star

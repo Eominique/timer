@@ -3,12 +3,13 @@ package com.eominik.timer.data
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.eominik.timer.core.IconKeys
+import com.eominik.timer.core.IconKey
 import com.eominik.timer.di.ApplicationScope
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 import javax.inject.Provider
+
 
 @Database(
     entities = [Reward::class],
@@ -31,22 +32,22 @@ abstract class TimerDatabase : RoomDatabase() {
             applicationScope.launch {
                 rewardDao.insertReward(
                     Reward(
-                        iconKey = IconKeys.CAKE,
-                        title = "1 piece of cake",
+                        iconKey = IconKey.CAKE,
+                        name = "1 piece of cake",
                         chanceInPercent = 5
                     )
                 )
                 rewardDao.insertReward(
                     Reward(
-                        iconKey = IconKeys.BATH_TUB,
-                        title = "Take a bath",
+                        iconKey = IconKey.BATH_TUB,
+                        name = "Take a bath",
                         chanceInPercent = 7
                     )
                 )
                 rewardDao.insertReward(
                     Reward(
-                        iconKey = IconKeys.TV,
-                        title = "Watch 1 episode of my favorite show",
+                        iconKey = IconKey.TV,
+                        name = "Watch 1 episode of my favorite show",
                         chanceInPercent = 10
                     )
                 )

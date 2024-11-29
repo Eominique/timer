@@ -68,7 +68,7 @@ dependencies {
     implementation ("androidx.navigation:navigation-compose:2.8.4")
 
     // Compose Extended Icons
-    implementation ("androidx.compose.material:material-icons-extended:1.0.0")
+    implementation ("androidx.compose.material:material-icons-extended:1.7.5")
 
     // ViewModel + LiveData
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
@@ -77,6 +77,7 @@ dependencies {
   //  implementation("androidx.compose.runtime:runtime-livedata:2.4.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7")
     implementation(libs.core.ktx)
+    implementation(libs.androidx.runtime.livedata)
     kapt("androidx.lifecycle:lifecycle-common-java8:2.8.7")
 
     // Room
@@ -113,6 +114,55 @@ dependencies {
     testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
 
     testImplementation(libs.junit)
+
+    androidTestImplementation ("androidx.room:room-testing:2.6.1")
+    androidTestImplementation ("com.google.dagger:hilt-android-testing:2.46")
+    kaptAndroidTest ("com.google.dagger:hilt-compiler:2.50")
+    androidTestImplementation ("androidx.test.ext:junit:1.2.1")
+    androidTestImplementation( "androidx.test.espresso:espresso-core:3.6.1")
+
+    // Dependencies for local unit tests
+    testImplementation( "junit:junit:4.13.2")
+    testImplementation( "org.hamcrest:hamcrest-all:1.3")
+    testImplementation( "androidx.arch.core:core-testing:2.2.0")
+    testImplementation( "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    testImplementation( "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
+    testImplementation( "org.robolectric:robolectric:4.2.1")
+    testImplementation( "androidx.navigation:navigation-testing:2.8.4")
+    testImplementation( "androidx.test.espresso:espresso-core:3.6.1")
+    testImplementation( "androidx.test.espresso:espresso-contrib:3.6.1")
+    testImplementation( "androidx.test.espresso:espresso-intents:3.6.1")
+    testImplementation( "com.google.truth:truth:1.1.5")
+    testImplementation( "androidx.compose.ui:ui-test-junit4:1.7.5")
+
+    // Dependencies for Android unit tests
+    androidTestImplementation( "junit:junit:4.13.2")
+    androidTestImplementation( "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
+    androidTestImplementation( "androidx.compose.ui:ui-test-junit4:1.7.5")
+
+    // AndroidX Test - JVM testing
+    testImplementation( "androidx.test:core-ktx:1.6.1")
+    testImplementation( "androidx.test.ext:junit-ktx:1.2.1")
+    testImplementation( "androidx.test:rules:1.6.1")
+    implementation ("androidx.test:core:1.6.1")
+
+    // AndroidX Test - Instrumented testing
+    androidTestImplementation( "androidx.test:core-ktx:1.6.1")
+    androidTestImplementation( "androidx.test.ext:junit-ktx:1.2.1")
+    androidTestImplementation( "androidx.test:rules:1.6.1")
+    androidTestImplementation( "androidx.room:room-testing:2.6.1")
+    androidTestImplementation( "androidx.arch.core:core-testing:2.2.0")
+    androidTestImplementation( "androidx.navigation:navigation-testing:2.8.4")
+    androidTestImplementation( "androidx.test.espresso:espresso-core:3.6.1")
+    androidTestImplementation ("androidx.test.espresso:espresso-contrib:3.6.1")
+    androidTestImplementation( "androidx.test.espresso:espresso-intents:3.6.1")
+    androidTestImplementation( "androidx.test.espresso.idling:idling-concurrent:3.6.1")
+    androidTestImplementation( "org.robolectric:annotations:4.7.3")
+    implementation( "androidx.test.espresso:espresso-idling-resource:3.6.1")
+
+    androidTestImplementation ("androidx.compose.ui:ui-test-junit4:1.7.5")
+    debugImplementation ("androidx.compose.ui:ui-test-manifest:1.7.5")
+
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))

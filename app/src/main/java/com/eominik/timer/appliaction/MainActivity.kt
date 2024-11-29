@@ -47,7 +47,7 @@ class MainActivity : ComponentActivity() {
 
 
 @Composable
-private fun ScreenContent() {
+fun ScreenContent() {
     val navController = rememberNavController()
 
     Scaffold(
